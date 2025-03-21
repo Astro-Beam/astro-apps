@@ -1,0 +1,28 @@
+<div style="height: 100%; width: 100%;">
+    <div style="width: fit-content; margin: auto;">
+        <h2>Waveform Fitter</h2>
+    </div>
+    <div style="width: fit-content; margin: auto; padding-top: 30px;">
+        <p style="float: left;">Total Mass (M☉)</p>
+        <mat-slider style="float: left; margin-left: 25px;" [max]="100" [min]="20" [step]="0.01" discrete>
+            <input matSliderThumb [value]="totalMass" (input)="changeValues()" [(ngModel)]="totalMass">
+        </mat-slider>
+        <p style="float: left; margin-left: 50px;">Distance (Mpc)</p>
+        <mat-slider style="float: left; margin-left: 25px;" [max]="800" [min]="100" [step]="0.01" discrete>
+            <input matSliderThumb [value]="distance" (input)="changeValues()" [(ngModel)]="distance">
+        </mat-slider>
+    </div>
+
+
+    <div style="width: fit-content; margin: auto;">
+        <figure id="line-chart"></figure>
+    </div>
+
+    <div style="width: fit-content; margin: auto; text-align: center; margin-top: 35px;">
+        <button mat-flat-button (click)="score()">Check your score!</button>
+        @if (total_score != null) {
+        <h2 [ngStyle]="{'color': total_score_color}">{{total_score}} %</h2>
+        }
+    </div>
+
+</div>
