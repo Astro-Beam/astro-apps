@@ -1,0 +1,1 @@
+import{Eb as i,Za as t,rb as o,sb as s}from"./chunk-QOBSIUZK.js";var a=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-signal-processing"]],decls:2,vars:0,template:function(e,p){e&1&&(o(0,"h3"),i(1,"Under Construction"),s())},encapsulation:2})};export{a as SignalProcessingComponent};
