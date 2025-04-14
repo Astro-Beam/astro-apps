@@ -28,6 +28,17 @@ export const routes: Routes = [
       title: 'Stellarium'
     }
   },
+  {
+    path: 'd3celestial',
+    loadComponent: () =>
+      import('./home/d3celestial/d3celestial.component').then(
+        (c) => c.D3celestialComponent
+      ),
+    title: 'D3 Celestial',
+    data: {
+      title: 'D3 Celestial'
+    }
+  },
 
   
 
